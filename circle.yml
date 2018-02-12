@@ -48,11 +48,9 @@ jobs:
           name: Publish docker image
           command: |
             if [ -n "${CIRCLE_TAG}" ]; then
-#              curl -sL https://raw.githubusercontent.com/buluma/test-infra/master/circle/docker-release-image.sh | bash -
-               echo 'Done';
+              curl -sL https://raw.githubusercontent.com/buluma/test-infra/master/circle/docker-release-image.sh | bash -
             elif [ "${CIRCLE_BRANCH}" == "master" ]; then
-#              curl -sL https://raw.githubusercontent.com/buluma/test-infra/master/circle/docker-development-image.sh | bash -
-               echo 'Done';
+              curl -sL https://raw.githubusercontent.com/buluma/test-infra/master/circle/docker-development-image.sh | bash -
             fi
 
 workflows:
